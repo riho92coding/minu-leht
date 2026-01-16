@@ -1,0 +1,242 @@
+
+/* Üldised stiilid */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    color: #333;
+    min-width: 320px;
+}
+
+/* Päiseriba stiilid */
+.header {
+    width: 100%;
+    /* Fikseerime kõrguse absoluutselt pikslites */
+    height: 240px !important; /* Tagab, et kõrgus on alati 240px */
+    background-image: url('banner1.png');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 15px 20px 0 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* Hoiab ära sisu väljavoolamise päisest */
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    min-height: 100px; /* Tagab, et see sektsioon on piisavalt kõrge */
+}
+
+.logo-le {
+    height: 100px;
+    width: auto;
+    margin-right: 15px;
+    flex-shrink: 0;
+    display: block; /* Mõnikord aitab piltidel korrektselt kuvada */
+}
+
+.header-text-img {
+    height: 60px;
+    width: auto;
+    margin-top: 10px;
+    flex-shrink: 0;
+    display: block; /* Mõnikord aitab piltidel korrektselt kuvada */
+}
+
+/* Navigatsiooni stiilid */
+.main-nav {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    flex-wrap: wrap;
+    min-height: 50px; /* Tagab, et navi jaoks on piisavalt ruumi */
+}
+
+.nav-button {
+    display: inline-block;
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;
+    white-space: nowrap;
+}
+
+.nav-button:hover {
+    background-color: #3a7bd5;
+}
+
+/* Sisu ümbris, et arvestada fikseeritud päisega */
+.content-wrapper {
+    margin-top: 240px !important;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    min-height: calc(100vh - 240px - 100px); /* Miinimumkõrgus, et vältida jaluse tõusmist */
+    display: block; /* Tagab, et element on plokktasemel */
+}
+
+/* Tootesektsioonide stiilid */
+.product-section {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+    margin-bottom: 30px;
+    background-color: #e0f2f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    overflow: hidden;
+    min-height: 400px;
+}
+
+.product-info-left {
+    width: 50%;
+    padding: 20px 40px;
+    text-align: left;
+    color: #4b0082;
+    box-sizing: border-box;
+}
+
+.product-image-right {
+    width: 50%;
+    height: 400px;
+    object-fit: contain;
+    display: block;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.product-info-left h2 {
+    font-size: 2.2em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.product-info-left p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* "Vaata lähemalt" nupu stiilid */
+.button {
+    display: inline-block;
+    background-color: #4a90e2;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #3a7bd5;
+}
+
+/* Jaluse stiilid */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9em;
+    margin-top: 50px;
+    position: relative; /* Tagab, et jalus on oma kohal */
+}
+
+/* Responsiveness - väiksemate ekraanide jaoks */
+@media (max-width: 768px) {
+    .header {
+        height: auto !important; /* Mobiilis kohandub kõrgus sisuga */
+        padding: 10px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+    }
+
+    .header-top {
+        flex-direction: column;
+        margin-bottom: 10px;
+        width: 100%;
+        min-height: auto; /* Mobiilis pole vaja fikseeritud kõrgust */
+    }
+
+    .logo-le {
+        height: 70px;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .header-text-img {
+        height: 40px;
+        margin-top: 0;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+        align-items: center;
+        min-height: auto; /* Mobiilis pole vaja fikseeritud kõrgust */
+    }
+
+    .nav-button {
+        width: 80%;
+        text-align: center;
+    }
+
+    .content-wrapper {
+        margin-top: 20px !important;
+        padding: 15px;
+        min-height: auto; /* Mobiilis kohandub kõrgus sisuga */
+    }
+
+    .product-section {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .product-info-left,
+    .product-image-right {
+        width: 100%;
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    .product-image-right {
+        margin-top: 20px;
+        padding-right: 15px;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .product-info-left h2 {
+        font-size: 1.8em;
+    }
+
+    .product-info-left p {
+        font-size: 1em;
+    }
+}
