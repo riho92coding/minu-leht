@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="et">
 <head>
@@ -10,7 +11,7 @@
     <header class="header">
         <div class="header-top">
             <img src="logo2.png" alt="Ettevõtte logo LE" class="logo-le">
-            <img src="headertext.png" alt="Laserehted" class="header-text-img">
+            <img src="headertext3.png" alt="Laserehted" class="header-text-img">
         </div>
         <nav class="main-nav">
             <a href="#" class="nav-button">Avaleht</a>
@@ -21,20 +22,67 @@
     </header>
 
     <main class="content-wrapper">
-        <!-- Siia tuleb piltide vahetusmehhanism, praegu on esimese pildi sisu näiteks -->
-        <section class="product-section">
-            <div class="product-info-left">
-                <h2>Avasta meie ainulaadne sebramustriline kõrvarõngaste seeria!</h2>
-                <p>Valmistatud hoolikalt tamme- või saarepuidust ja viimistletud naturaalse linaõli ning mesilasvahaga, pakuvad need ajatud elegantsi. Saadaval mitmetes trendikates kujudes – ruut, romb, ellips ja palju muud. Leia oma lemmik!</p>
-                <a href="#" class="button">Vaata lähemalt</a>
+        <!-- 1. SLAIDISEERIA OSA -->
+        <section class="product-hero">
+            <!-- SLAID 1 -->
+            <div class="slide">
+                <img src="seeria pilt1.png" alt="Sebramustriline seeria" class="hero-image">
+                <div class="hero-container">
+                    <div class="hero-text-overlay">
+                        <h2>Avasta meie ainulaadne sebramustriline kõrvarõngaste seeria!</h2>
+                        <p>Valmistatud hoolikalt tamme- või saarepuidust ja viimistletud naturaalse 
+						   linaõli ning mesilasvahaga, pakuvad need ajatut elegantsi. 
+						   Saadaval mitmetes trendikates kujudes – ruut, romb, ellips ja palju muud. Leia oma lemmik!</p>
+                        <a href="#" class="hero-button">Vaata lähemalt</a>
+                    </div>
+                </div>
             </div>
-            <img src="seeria pilt 2.png" alt="Sebra mustriga kõrvarõngad" class="product-image-right">
+
+            <!-- SLAID 2 -->
+            <div class="slide">
+                <img src="seeria pilt2.png" alt="Laserlõigatud disainiehted" class="hero-image">
+                <div class="hero-container text-right">
+                    <div class="hero-text-overlay">
+                        <h2>Laserlõigatud disainiehted – naturaalsest puidust</h2>
+                        <p>Valikus elegantne kasevineer, tamm, saar ja ameerika pähklipuu. 
+						   Sajad kujundused ootavad avastamist – sinu ehte viimistlus ja suurus vastavalt soovile.</p>
+                        <a href="#" class="hero-button">Tutvu valikuga</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLAID 3 -->
+            <div class="slide">
+                <img src="seeria pilt3.png" alt="Pähklipuust kammid" class="hero-image">
+                <div class="hero-container text-right">
+                    <div class="hero-text-overlay">
+                        <h2>Eksklusiivne kollektsioon ameerika pähklipuust kamme!</h2>
+                        <p>Valikus on klassikaline tavaline kamm, käepärane kokkukäiv kamm ning spetsiaalne 
+						   soengukamm. Naudi looduse puudutust oma juuksehoolduses!</p>
+                        <a href="#" class="hero-button">Vaata kamme</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NOOLEKE (Slaideri peal, aga slaididest eraldi) -->
+            <a href="#about" class="scroll-down">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 10L12 15L17 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
         </section>
-        <!-- Ülejäänud tootesektsioonid eemaldatakse ja asendatakse JavaScripti kaudu vahelduvate slaididega -->
+
+        <!-- 2. TUTVUSTAV TEKST (Slaideri all) -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>Kvaliteetne disain, mis algab materjalist</h2>
+                <p>Meie lugu on lihtne – me usume, et igapäevased esemed peaksid pakkuma nii silmailu kui ka kestvust. Kasutades väärikat Ameerika pähklipuud ja kaasaegset lasertehnoloogiat, loome detaile, mis on isikupärased ja ajatud. Iga kamm, ehe või sisustuselement läbib meie käte vahel põhjaliku viimistluse, et jõuda Sinuni oma parimas ja loomulikumas vormis.</p>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 Sinu Ettevõte. Kõik õigused kaitstud.</p>
+        <p>&copy; 2026 Laserehted. Kõik õigused kaitstud.</p>
     </footer>
 </body>
 </html>
